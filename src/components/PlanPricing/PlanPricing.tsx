@@ -45,7 +45,7 @@ export default function PlanPricing() {
     return (
         <section className="plan-pricing">
             <header className="plan-pricing__header">
-                <h1>Our Pricing</h1>
+                <h1 style={{color:'#6E728E'}}>Our Pricing</h1>
 
                 <div className="plan-pricing__switch">
                     <p className="plan-pricing__switch-label">Annually</p>

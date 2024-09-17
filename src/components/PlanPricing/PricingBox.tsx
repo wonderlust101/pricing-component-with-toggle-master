@@ -20,13 +20,13 @@ export default function PricingBox({type, storage, maxUsers, sendSize, costMonth
             </header>
 
             <div className="pricing-box__details">
-                <hr/>
+                <hr className="pricing-box__divider" />
                 <p>{storage < 1 ? storage * 1000 + "GB" : 'TB'}</p>
-                <hr/>
+                <hr className="pricing-box__divider" />
                 <p>{maxUsers} Users Allowed</p>
-                <hr/>
+                <hr className="pricing-box__divider" />
                 <p>Send up to {sendSize} GB</p>
-                <hr/>
+                <hr className="pricing-box__divider" />
             </div>
 
             <Button href='#' color={type === 'professional' ? 'white': 'purple'}>
