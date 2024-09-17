@@ -1,0 +1,38 @@
+@use '/src/assets/styles/abstract/index' as a;
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08706rem;
+  border: none;
+  border-radius: 0.375rem;
+
+  &--purple {
+    color: a.$clr-white;
+    background: a.$clr-purple-gradient;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: a.$clr-purple-500;
+      background: transparent;
+      border: 2px solid a.$clr-purple-500;
+    }
+  }
+
+  &--white {
+    color: a.$clr-purple-500;
+    background: a.$clr-white;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: a.$clr-white;
+      background: transparent;
+      border: 2px solid a.$clr-white;
+    }
+  }
+}

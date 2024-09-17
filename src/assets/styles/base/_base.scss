@@ -1,0 +1,7 @@
+@use '../abstract/index' as a;
+
+main {
+  display: grid;
+  min-height: 100vh;
+  background: url('./images/bg-top.svg') no-repeat top right, url('./images/bg-bottom.svg') no-repeat bottom left a.$clr-background;
+}

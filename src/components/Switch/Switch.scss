@@ -1,0 +1,51 @@
+@use '/src/assets/styles/abstract/index' as a;
+
+.switch {
+  width: 3.25rem;
+  height: 100%;
+  border-radius: 50rem;
+  cursor: pointer;
+  position: relative;
+  background: a.$clr-purple-gradient;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50rem;
+    transform: translate(0, -50%);
+    background: a.$clr-white;
+  }
+  
+  &__layout {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__switch-label {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: 2rem;
+  }
+
+  &__box {
+    display: none;
+  }
+
+  &__box:checked + .switch::before {
+    right: unset;
+    left: 5%;
+  }
+}

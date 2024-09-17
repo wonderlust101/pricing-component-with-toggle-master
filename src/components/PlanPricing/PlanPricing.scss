@@ -1,0 +1,41 @@
+@use '/src/assets/styles/abstract' as a;
+
+.plan-pricing {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 5rem;
+  padding: 4rem 1.5rem;
+
+  &__header {
+    display: grid;
+    justify-items: center;
+    gap: 2.5rem;
+  }
+  
+  &__switch {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  &__switch-label {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.9;
+    color: a.$clr-grey-400;
+  }
+
+  &__pricing-grid {
+    display: grid;
+    justify-items: center;
+    gap: 2.25rem;
+    width: 100%;
+
+    @include a.breakpoint(medium) {
+      grid-template: 1fr / 24rem 24rem 24rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+  }
+}
